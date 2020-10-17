@@ -1,17 +1,20 @@
 <template>
-  <div @click="$emit('click')" class="cell">
-    <span v-if="'' !== value">{{ value }}</span>
+  <div class="cell" @click="$emit('click')">
+    <span v-if="value">{{ value }}</span>
   </div>
 </template>
 
 <script lang="ts">
-import Vue from 'vue';
+import Vue from 'vue'
 
 export default Vue.extend({
   props: {
-    value: String,
-  },
-});
+    value: {
+      type: String,
+      default: ''
+    }
+  }
+})
 </script>
 
 <style lang="sass" scoped>
