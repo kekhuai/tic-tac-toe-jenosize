@@ -1,5 +1,5 @@
 <template>
-  <div class="cell">
+  <div @click="$emit('click')" class="cell">
     <span v-if="'' !== value">{{ value }}</span>
   </div>
 </template>
